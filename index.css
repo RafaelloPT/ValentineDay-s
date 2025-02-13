@@ -1,0 +1,389 @@
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background: #fee2e9;
+    font-family: "Solitreo", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    padding: 20px;
+}
+.countdown {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #333;
+}
+.pillar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pillar-top {
+    width: 200px;
+    height: 30px;
+    background: #8B4513;
+    border-radius: 5px 5px;
+    margin-left: -10px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.pillar-body {
+    flex-grow: 1;
+    background: linear-gradient(90deg, 
+        #A0522D 0%, 
+        #8B4513 20%, 
+        #A0522D 50%,
+        #8B4513 80%, 
+        #A0522D 100%
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.wood-grain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 20px,
+        rgba(0,0,0,0.1) 20px,
+        rgba(0,0,0,0.1) 21px
+    );
+}
+
+.pillar-base {
+    width: 200px;
+    height: 30px;
+    background: #8B4513;
+    border-radius: 5px 5px 0 0;
+    margin-left: -10px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Adiciona detalhes de madeira */
+.wood-detail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(0,0,0,0.1) 30%,
+        transparent 70%,
+        rgba(0,0,0,0.1) 100%
+    );
+}
+
+/* Novo CSS para o objeto decorativo */
+.object-container {
+    position: absolute;
+    bottom: calc(100% - 75px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.decorative-vase {
+    width: 50px;
+    height: 50px;
+    background: #4A4A4A; /* Cinza escuro como na imagem */
+    border-radius: 0px 0px 5px 5px; /* Borda levemente arredondada */
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 -10px 20px rgba(0,0,0,0.2); /* Sombra sutil */
+}
+
+/* Removendo as classes antigas do vaso */
+.vase-neck,
+.vase-body {
+    display: none;
+}
+
+/* Adicionando um sutil gradiente para dar profundidade */
+.vase-detail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0.05) 20%,
+        transparent 40%,
+        transparent 0%,
+        rgba(0,0,0,0.1) 100%
+    );
+}
+
+/* Opcional: Adicionar uma planta estilizada */
+.plant {
+    position: absolute;
+    bottom: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    bottom: calc(100% - 70px);
+}
+
+.ramo{
+    position: absolute;
+    width: 10px;
+    height: 120px;
+    right: 45%;
+    background: #3a5a40;
+    transform-origin: bottom;
+}
+.leaf{
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    right: 30%;
+    background: #3a5a40;
+    border-radius: 50% 50% 20% 20%;
+    transform-origin: bottom;
+    bottom: calc(100% - 80px);
+}
+.leaf1{
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    right: 30%;
+    background: #3a5a40;
+    border-radius: 50% 50% 20% 20%;
+    transform-origin: bottom;
+    bottom: calc(100% - 50px);
+    transform: rotate(-50deg);
+}
+
+.leaf:nth-child(1) { transform: rotate(30deg) translateX(-10px); }
+.leaf:nth-child(2) { transform: rotate(50deg); }
+.leaf:nth-child(3) { transform: rotate(3deg) translateX(10px); }
+
+.petal-container {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .petal {
+    position: relative;
+    width: 40px;
+    height: 60px;
+    right: -32%;
+    bottom: calc(100% - 80px);
+    background: linear-gradient(
+      45deg,
+      #570012,
+      #8b001b 30%,
+      #bc063b 60%
+    );
+    border-radius: 100% 5px 100% 100%;
+    transform: rotate(-45deg);
+    box-shadow: 
+      inset -5px -5px 10px rgba(0,0,0,0.4),
+      inset 5px 5px 10px rgba(255,255,255,0.1);
+  }
+  .petal1 {
+    position: relative;
+    width: 40px;
+    height: 60px;
+    right: -25%;
+    bottom: calc(100% - 80px);
+    background: linear-gradient(
+      45deg,
+      #570012,
+      #8b001b 30%,
+      #bc063b 60%
+    );
+    border-radius: 100% 5px 100% 100%;
+    transform: scaleX(-1) rotate(-45deg);  /* Adicionado scaleX(-1) */
+    box-shadow: 
+      inset -5px -5px 10px rgba(0,0,0,0.4),
+      inset 5px 5px 10px rgba(255,255,255,0.1);
+  }
+  .petal2 {
+    position: relative;
+    width: 40px;
+    height: 60px;
+    top: -60%;
+    z-index: -1;
+    right: 2%;
+    background: linear-gradient(
+      45deg,
+      #570012,
+      #8b001b 30%,
+      #bc063b 60%
+    );
+    border-radius: 100% 5px 100% 100%;
+    transform: rotate(-45deg);
+    box-shadow: 
+      inset -5px -5px 10px rgba(0,0,0,0.4),
+      inset 5px 5px 10px rgba(255,255,255,0.1);
+  }
+  .petal3 {
+    position: relative;
+    width: 40px;
+    height: 60px;
+    top: -60%;
+    z-index: -1;
+    right: 20%;
+    background: linear-gradient(
+      45deg,
+      #570012,
+      #8b001b 30%,
+      #bc063b 60%
+    );
+    border-radius: 100% 5px 100% 100%;
+    transform: scaleX(-1) rotate(-45deg);
+    box-shadow: 
+      inset -5px -5px 10px rgba(0,0,0,0.4),
+      inset 5px 5px 10px rgba(255,255,255,0.1);
+  }
+  .petal4 {
+    position: relative;
+    width: 40px;
+    height: 50px;
+    top: -62%;
+    z-index: -1;
+    right: 41%;
+    background: linear-gradient(
+      45deg,
+      #570012,
+      #8b001b 30%,
+      #bc063b 60%
+    );
+    border-radius: 100% 5px 100% 100%;
+    transform: scaleX(-1) rotate(-38deg);
+    box-shadow: 
+      inset -5px -5px 10px rgba(0,0,0,0.4),
+      inset 5px 5px 10px rgba(255,255,255,0.1);
+  }
+  .glass-dome {
+    position: absolute;
+    width: 193px;
+    height: 250px;
+    left: 50%;
+    top:30%;
+    transform: translateX(-50%);
+    border-radius: 100px 100px 0 0;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    /* Borda mais visível */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Aumentei espessura e opacidade */
+    /* Dupla borda com outline */
+    outline: 1px solid rgba(255, 255, 255, 0.2);
+    outline-offset: -5px;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.03),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.glass-base {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Efeito de reflexo */
+.glass-dome::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 60px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 100%
+    );
+    border-radius: 50% 50% 0 0;
+}
+
+@media (max-width: 768px) {
+    .glass-dome {
+        width: 150px;
+        height: 200px;
+    }
+
+    .pillar {
+        width: 140px;
+    }
+
+    .pillar-top,
+    .pillar-base {
+        width: 160px;
+        margin-left: -10px;
+    }
+
+    .object-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .countdown {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .glass-dome {
+        width: 120px;
+        height: 180px;
+    }
+
+    .pillar {
+        width: 100px;
+    }
+
+    .pillar-top,
+    .pillar-base {
+        width: 120px;
+        margin-left: -10px;
+    }
+
+    .countdown {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .petal, .petal1, .petal2, .petal3, .petal4 {
+        width: 30px;
+        height: 45px;
+    }
+
+    .ramo {
+        width: 8px;
+        height: 100px;
+    }
+
+    .leaf, .leaf1 {
+        width: 15px;
+        height: 40px;
+    }
+}
