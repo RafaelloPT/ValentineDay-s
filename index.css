@@ -1,4 +1,4 @@
-body {
+ body {
     min-height: 100vh;
     width: 100vw;
     background: #fee2e9;
@@ -282,7 +282,7 @@ body {
     width: 193px;
     height: 250px;
     left: 50%;
-    top:30%;
+    top:24%;
     transform: translateX(-50%);
     border-radius: 100px 100px 0 0;
     background: rgba(255, 255, 255, 0.05);
